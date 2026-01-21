@@ -33,7 +33,7 @@ export function OneImage({imageItem}) {
           {openShare && <ShareApps ShareImage={ShareImage} /> }
           <span className="i-like-it">
             <i className="fa-regular cursor-pointer fa-thumbs-up"></i>
-            &nbsp;&nbsp;I like it
+            &nbsp;&nbsp;like
           </span>
         </div>
 
