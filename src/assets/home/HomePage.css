@@ -1,0 +1,203 @@
+body {
+   margin: 0;
+   font-family: 'Open Sans', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+.conte-image, .conte-descri {
+    text-decoration: none;
+    color: black;
+    
+}
+
+.conte-descri:active {
+    color: black;
+}
+
+
+
+.cursor{
+    cursor: pointer;
+}
+
+.all-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 10px;
+    margin-top: 50px;
+    
+}
+
+.image-container {
+    min-width: 0;
+    box-shadow: 0 0 5px rgb(156, 155, 155);
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conte-image, .conte-descri, .conte-interacts, .conte-visi-butt, .image-alone {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.conte-descri {
+    margin: 0;
+
+}
+
+.visit-button {
+    background-color: #a1ef80;
+    height: 30px;
+    max-width: 250px;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease 0s;
+}
+
+.visit-button:hover {
+    background-color: rgb(245, 223, 136);
+
+}
+
+.conte-interacts {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px 20px;
+}
+
+.comment, .share, .i-like-it {
+    background-color: rgba(25, 27, 38, 0.05);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 0px;
+    font-size: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.comment:hover, .share:hover, .i-like-it:hover {
+    background-color: rgba(220, 220, 220, 0.2);
+    
+}
+
+.village-description {
+   padding: 0 0 0px 10px;
+   
+}
+
+.share-apps {
+    opacity: 1;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 5px rgb(132, 132, 132);
+    border-radius: 10px;
+    pointer-events: none;
+    z-index: 99;
+    pointer-events: auto;  
+}
+
+
+
+.share-apps span {
+    padding: 20px;
+    font-size: 200%;
+
+}
+
+.share-apps span i {
+   cursor: pointer;
+}
+
+.share-apps span .fa-facebook {
+    color: #1877F2;
+     
+}
+
+.share-apps span .fa-whatsapp {
+    color: #25D366;
+
+}
+
+.share-apps span .fa-envelope {
+    color: #555555;
+
+}
+
+.share-apps span .fa-twitter {
+    color: #1DA1F2;
+
+
+}
+
+.share-apps span .fa-telegram {
+    color: #0088CC;
+
+}
+
+.share-apps span .fa-link {
+    color: #555555;
+
+}
+
+.share-apps-close {
+    position: absolute;
+    width: 30%;
+    height: 7px;
+    align-items: center;
+    background-color: #555555a0;
+    border-radius: 10px;
+    top: 1%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+}
+
+.share-apps-close:hover {
+    background-color: #555555e2;
+    cursor: pointer;
+    
+}
+
+.close {
+    position: absolute;
+    opacity: 0;
+}
+
+@media (max-width: 1169px) {
+   .all-content{
+         grid-template-columns: repeat(3, 1fr);
+   }
+}
+
+@media (max-width: 900px) {
+   .all-content{
+         grid-template-columns: repeat(2, 1fr);
+   }
+
+}
+
+@media (max-width: 600px) {
+   .all-content{
+         grid-template-columns: repeat(1, 1fr);
+   }
+
+
+
+}
+

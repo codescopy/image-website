@@ -1,0 +1,264 @@
+body {
+   margin: 0;
+   font-family: 'Open Sans', sans-serif;
+}
+
+.who-all-content {
+    display: grid;
+    grid-template-columns: 3.5fr 1.5fr 2fr;
+    column-gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: start;
+    margin-top: 70px;
+}
+
+.left-content {
+      display: grid;
+      grid-template-columns: /*3.5fr 1.5fr*/ 3.5fr 1.5fr;
+      column-gap: 20px;
+}
+
+li {
+    list-style: none;
+}
+
+.who-image {
+    max-width: 100%;
+}
+
+.image-with-comment {
+   position: static;
+   top: 60px;
+
+      /* limit height */
+ /*  overflow-y: auto; */
+   box-sizing: border-box;
+   
+}
+
+.comment {
+    margin: 0 0 0 0;
+    cursor: default;
+}
+
+.related-images img {
+    max-width: 100%;
+}
+
+.related-images {
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+    
+}
+
+.descri {
+    position: sticky;
+    top: 60px;
+    box-shadow: 0 0 10px rgb(200, 200, 200);
+    padding: 10px;
+    min-width: 300px;
+    
+}
+
+
+.who-views {
+    display: flex;
+    justify-content: space-between;
+}
+
+.who-visit-button {
+    background-color:  #a1ef80;
+    height: 30px;
+    max-width: 300px;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.who-village-description {
+    max-width: 600px;
+
+}
+
+ .who-interacts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 20px;
+
+    
+}
+
+.user-image {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    
+}
+
+a {
+    cursor: default;
+}
+
+.profile-word-comm {
+    box-shadow: 0 0 5px rgb(180, 180, 180);
+    position: relative;
+    padding: 20px;
+}
+
+.show-more {
+    background-color: rgba(239, 239, 239, 0.703);
+
+    -webkit-mask-image: linear-gradient(
+    to top,
+    rgb(255, 255, 255) 0%,
+    rgb(255, 255, 255) 25%,
+    rgb(255, 255, 255) 50%,
+    rgba(0,0,0,0) 75%
+  );
+   
+}
+
+.show-more, .show-more-words {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.show-more {
+    bottom: 0;
+    left: 0;
+    height: 40px;
+
+}
+
+.show-more-words {
+    bottom: 0px;
+    font-weight: bold;
+    color: rgb(96, 96, 255);
+    text-decoration: underline;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.user-comment, .word-comment {
+    margin-bottom: 0;
+}
+
+.left-image:hover {
+   cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
+
+  /* ===== GENERAL RESET FOR MOBILE ===== */
+  body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 0;
+  }
+
+  /* ===== MAIN LAYOUT ===== */
+  .who-all-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+  }
+
+  /* ===== IMAGE + COMMENTS ===== */
+  .image-with-comment {
+    position: static;
+    width: 100%;
+  }
+
+  .who-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+
+  /* ===== COMMENTS SECTION ===== */
+  .profile-word-comm {
+    padding: 15px;
+    box-shadow: none;
+    border: 1px solid #e0e0e0;
+  }
+
+  .user-comment {
+    margin-bottom: 15px;
+  }
+
+  .word-comment {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* show-more overlay */
+  .show-more {
+    height: 50px;
+  }
+
+  .show-more-words {
+    font-size: 14px;
+    bottom: 5px;
+  }
+
+  /* ===== DESCRIPTION ===== */
+  .descri {
+    position: static; /* remove sticky on mobile */
+    min-width: unset;
+    box-shadow: none;
+    border: 1px solid #e0e0e0;
+  }
+
+  .who-village-description {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* ===== INTERACTIONS ===== */
+  .who-interacts {
+    justify-content: space-between;
+    row-gap: 10px;
+    font-size: 14px;
+  }
+
+  /* ===== DOWNLOAD BUTTON ===== */
+  .who-visit-button {
+    max-width: 100%;
+    height: 40px;
+    font-size: 15px;
+  }
+
+  /* ===== RELATED IMAGES ===== */
+  .related-images {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+
+  .related-images img {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+}
